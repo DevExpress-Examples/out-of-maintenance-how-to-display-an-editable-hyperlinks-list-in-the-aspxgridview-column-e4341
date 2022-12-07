@@ -4,9 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DevExpress.Web.ASPxGridView;
-using DevExpress.Web.ASPxEditors;
-using DevExpress.Web.ASPxCallbackPanel;
+using DevExpress.Web;
 using System.Data;
 
 public partial class _Default : System.Web.UI.Page {
@@ -135,7 +133,7 @@ public partial class _Default : System.Web.UI.Page {
     }
     #endregion
 
-    protected void cbpnEmployee_Callback(object sender, DevExpress.Web.ASPxClasses.CallbackEventArgsBase e) {
+    protected void cbpnEmployee_Callback(object sender, DevExpress.Web.CallbackEventArgsBase e) {
         ASPxCallbackPanel callbackPanel = sender as ASPxCallbackPanel;
         GridViewDataItemTemplateContainer container = callbackPanel.NamingContainer as GridViewDataItemTemplateContainer;
         Repeater repEmployee = callbackPanel.FindControl("repEmployee") as Repeater;

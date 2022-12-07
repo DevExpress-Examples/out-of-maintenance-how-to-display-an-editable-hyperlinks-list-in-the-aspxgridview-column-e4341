@@ -5,9 +5,7 @@ Imports System.Linq
 Imports System.Web
 Imports System.Web.UI
 Imports System.Web.UI.WebControls
-Imports DevExpress.Web.ASPxGridView
-Imports DevExpress.Web.ASPxEditors
-Imports DevExpress.Web.ASPxCallbackPanel
+Imports DevExpress.Web
 Imports System.Data
 
 Partial Public Class _Default
@@ -136,7 +134,7 @@ Partial Public Class _Default
 	End Sub
 	#End Region
 
-	Protected Sub cbpnEmployee_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.ASPxClasses.CallbackEventArgsBase)
+	Protected Sub cbpnEmployee_Callback(ByVal sender As Object, ByVal e As DevExpress.Web.CallbackEventArgsBase)
 		Dim callbackPanel As ASPxCallbackPanel = TryCast(sender, ASPxCallbackPanel)
 		Dim container As GridViewDataItemTemplateContainer = TryCast(callbackPanel.NamingContainer, GridViewDataItemTemplateContainer)
 		Dim repEmployee As Repeater = TryCast(callbackPanel.FindControl("repEmployee"), Repeater)
